@@ -23,6 +23,8 @@ public class AnnouncementController {
         return announcementService.create(announcement, id);
     }
 
+    // get all announcements
+
     @GetMapping("/classroom/{id}/announcement")
     public List<AnnouncementDTO> getAllAnnouncements(@PathVariable String id) {
         return announcementService.get(id);
