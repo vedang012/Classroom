@@ -1,0 +1,86 @@
+.screen {
+    font-family: "Work sans", serif;
+}
+
+.profile-icon {
+    background-image: url('../assets/profile.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card-content {
+    transition: all 0.7s ease-in-out; 
+    background-color: #121212ca;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.dark-mode .class-card{
+    border: 1px solid black;
+}
+
+.dark-mode .card-content p{
+    color: gray;
+}
+
+.dark-mode .sidebar{
+    border-right: 1px solid rgb(65, 55, 55);
+}
+
+.dark-mode .header {
+    border-bottom: 1px solid rgb(65, 55, 55);
+}
+
+.dark-mode .h-line {
+    border-top: 1px solid rgb(65, 55, 55);
+}
+
+.dark-mode .join-input{
+    background-color: transparent;
+    border: 1px solid rgb(65, 55, 55);
+}
+
+.dark-mode .join-btn{
+    background-color: transparent;
+    border: 1px solid rgb(65, 55, 55);
+}
+
+.hover-color:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.hover-bgcolor:hover {
+    background-color: rgba(211, 211, 211, 0.19);
+    
+    cursor: pointer
+}
+
+.header {
+    height: 9%;
+}
+
+.sidebar{
+    height : 100%
+}
+
+.card-content {
+    transition: all 0.1s; /* Adjust the duration here */
+    background-color: rgba(255, 255, 255, 0.832);
+    /* background-color: #121212ca; */
+
+    height: 100%;
+    width: 100%;
+}
+
+.card-content:hover {
+    background-color: rgba(255, 255, 255, 0.455);
+}

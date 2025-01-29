@@ -1,0 +1,35 @@
+.enabled-btn {
+    color: rgb(0, 145, 255);
+}
+
+.login-type-btn:hover{
+    color: rgb(0, 145, 255);
+    cursor: pointer;
+}
+
+.heading {
+    font-size: x-large;
+}
+
+.login-btn {
+    color: white;
+    background-color: rgb(0, 145, 255);
+    height: 2.25rem;
+}
+
+.login-btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+
+.login-input {
+    padding-left: 4px;
+}
+
+.show-pass-icon:hover {
+    cursor: pointer;
+}
+
+

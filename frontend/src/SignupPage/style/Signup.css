@@ -1,0 +1,37 @@
+.enabled-btn {
+    color: rgb(0, 145, 255);
+}
+
+.Signup-type-btn:hover{
+    color: rgb(0, 145, 255);
+    cursor: pointer;
+
+}
+
+.heading {
+    font-size: x-large;
+}
+
+.Signup-btn {
+    color: white;
+    background-color: rgb(0, 145, 255);
+    height: 2.25rem;
+}
+
+.Signup-btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+
+}
+
+.Signup-input {
+    padding-left: 4px;
+}
+
+.show-pass-icon:hover {
+    cursor: pointer;
+
+}
+
