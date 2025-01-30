@@ -1,6 +1,3 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
 
-*.jsx linguist-detectable=false
-*.java linguist-detectable=true
-

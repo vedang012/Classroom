@@ -1,11 +1,18 @@
 import React from 'react'
 import { MdOutlinePictureAsPdf } from "react-icons/md";
+import { useLocation } from 'react-router-dom';
 
 const Files = () => {
+
+    const location = useLocation()
+
+    const {isTeacher} = location.state || {}
     return (
         <div className='content-card space-y-3'>
 
-            <div className="announcement-card p-3 w-full h-auto border rounded-md flex flex-col space-y-2">
+        {/* New file upload card. Rendered only for teachers */}
+
+            {isTeacher && <div className="announcement-card p-3 w-full h-auto border rounded-md flex flex-col space-y-2">
                 <div className='flex flex-row items-end space-x-2'>
                     <p> Upload a new file </p>
                 </div>
@@ -19,7 +26,9 @@ const Files = () => {
                 <input type="file" name="Upload file" id="fileupload" />
 
 
-            </div>
+            </div>}
+
+
 
 
             <div className="announcement-card p-3 w-full h-auto border rounded-md flex flex-col space-y-2">

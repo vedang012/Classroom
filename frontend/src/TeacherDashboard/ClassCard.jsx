@@ -1,10 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const ClassCard = ({id , bgImg, title, teacher}) => {
+const ClassCard = ({id , bgImg, title, teacher, isTeacher}) => {
+
+    const nevigate = useNavigate()
 
     const handleClassClick = () => {
 
-        window.location.href = `/teacher-dashboard/class/${id}`
+        nevigate(`/teacher-dashboard/class/${id}`, {state : {
+            isTeacher : isTeacher
+        }})
     }
 
     return (

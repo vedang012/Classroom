@@ -5,7 +5,7 @@ import './Class.css'
 import Announcement from './Announcement'
 import Files from './Files'
 import { getClassroomName, getTeacherName } from '../../axios/requests'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 
 const TeacherClass = () => {
@@ -19,6 +19,10 @@ const TeacherClass = () => {
     const handleTabClick = (index) => {
         setSelectionIndex(index)
     }
+
+    const location = useLocation()
+
+    const {isTeacher} = location.state || {}
 
     useEffect(() => {
         const doReq = async () => {
@@ -86,8 +90,8 @@ const TeacherClass = () => {
                                 </div>
 
                                 <div className="card h-full">
-                                    {selectionIndex == 0 && <Announcement />}
-                                    {selectionIndex == 1 && <Files />}
+                                    {selectionIndex == 0 && <Announcement isTeacher = {isTeacher}/>}
+                                    {selectionIndex == 1 && <Files isTeacher = {isTeacher}/>}
 
                                 </div>
 
