@@ -24,19 +24,19 @@ An online Classroom project inspired by Google Classroom made with Spring Boot (
 * Tailwind CSS
 
 * # Progress
-* Database setup
-* Authentication with JWT (Role based)
-* Backend APIs setup
-* Frontend Design
-* Student Dashboard
-* Teacher Dashboard
-* Create / Join classroom using invite code
-* Announcement section
+* Database setup ✅
+* Authentication with JWT (Role based) ✅
+* Backend APIs setup ✅
+* Frontend Design ✅
+* Student Dashboard ✅
+* Teacher Dashboard ✅
+* Create / Join classroom using invite code ✅
+* Announcement section ✅
 
 # To-Do 
-* Files section
-* People section
-* Live chat
-* Additional options
+* Files section ⏳
+* People section ⏳
+* Live chat ⏳
+* Additional options ⏳
 
   
