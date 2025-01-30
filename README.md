@@ -21,6 +21,7 @@ An online Classroom project inspired by Google Classroom made with Spring Boot (
 * React JS - The frontend is made using React
 * MySQL - The database used for project
 * JWT - The authentication is secure using JWT
+* Tailwind CSS
 
 * # Progress
 * Database setup
