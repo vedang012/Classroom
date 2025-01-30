@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { IoMdEyeOff } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { loginTeacher } from '../axios/requests';
+import { useNavigate } from 'react-router-dom';
 
 const LoginTeacher = () => {
     const [showPassword, setShowPassword] = useState(false)
+    
+    const navigate = useNavigate()
 
     const handleShowPassClick = () => {
         setShowPassword(!showPassword)
@@ -27,7 +30,7 @@ const LoginTeacher = () => {
             const data = await loginTeacher(email, pass)
             console.log(data.data)
             localStorage.setItem("jwt", data.data)
-            window.location.href = "/teacher-dashboard"
+            navigate("/teacher-dashboard")
         } catch (error) {
             console.log(error.message)
         }

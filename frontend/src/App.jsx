@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './LoginPage/Login';
 import Signup from './SignupPage/Signup';
 import Home from './Homepage/Home';
-import TeacherDashboard from './TeacherDashboard/TeacherDashboard';
-import TeacherClass from './TeacherDashboard/Class/TeacherClass'
+import Dashboard from './Dashboard/Dashboard';
+import Class from './Dashboard/Class/Class'
 
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/student-dashboard" element={<TeacherDashboard isTeacher={false}/>} />
-            <Route path="/student-dashboard/class/:id" element={<TeacherClass />} />
-            <Route path="/teacher-dashboard" element={<TeacherDashboard isTeacher={true}/>} />
-            <Route path="/teacher-dashboard/class/:id" element={<TeacherClass />} />
+            <Route path="/student-dashboard" element={<Dashboard isTeacher={false}/>} />
+            <Route path="/student-dashboard/class/:id" element={<Class />} />
+            <Route path="/teacher-dashboard" element={<Dashboard isTeacher={true}/>} />
+            <Route path="/teacher-dashboard/class/:id" element={<Class />} />
 
           </Routes>
         </div>

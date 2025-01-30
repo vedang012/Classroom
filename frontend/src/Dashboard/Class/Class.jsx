@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import SideBar from '../../TeacherDashboard/SideBar'
-import Header from '../../TeacherDashboard/Header'
+import SideBar from '../../Dashboard/SideBar'
+import Header from '../../Dashboard/Header'
 import './Class.css'
 import Announcement from './Announcement'
 import Files from './Files'

@@ -4,7 +4,7 @@ import { IoMdMenu } from "react-icons/io";
 import { isDarkMode } from '../context/context';
 
 
-const Header = () => {
+const Header = ({isTeacher}) => {
 
     const value = useContext(isDarkMode)
     const setDarkTheme = () => {
@@ -17,13 +17,14 @@ const Header = () => {
 
             <div className="greet w-2/3 flex items-center space-x-5">
                 <IoMdMenu className='size-7'/>
-                <h1 className='text-3xl font-normal'>Hello, Teacher!</h1>
+                <h1 className='text-3xl font-normal'>Hello, {isTeacher ? "Teacher" : "Student"}!</h1>
             </div>
 
 
             <div className="menu w-full flex flex-row items-center justify-around">
                 <button className='hover-color'>Home</button>
                 <button className='hover-color'>Calender</button>
+                {!isTeacher && <button className='hover-color'>To Do</button>}
                 <button className='hover-color'>Settings</button>
                 <CgDarkMode onClick={setDarkTheme} className='size-7 hover:cursor-pointer' />
                 <div className="profile-icon hover:cursor-pointer">

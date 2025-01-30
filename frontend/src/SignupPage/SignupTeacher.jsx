@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { IoMdEyeOff } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { registerTeacher } from '../axios/requests';
+import { useNavigate } from 'react-router-dom';
 
 const SignupTeacher = () => {
     const [showPassword, setShowPassword] = useState(false)
+
+    const navigate = useNavigate()
 
     const handleShowPassClick = () => {
         setShowPassword(!showPassword)
@@ -17,7 +20,7 @@ const SignupTeacher = () => {
             try {
                 const data = await registerTeacher(email, pass)
                 console.log("signup successful")
-                window.location.href = "/login"
+                navigate("/login")
             } catch (error) {
                 alert(error.message)
             }

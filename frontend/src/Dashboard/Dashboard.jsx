@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './TeacherDashboard.css'
+import './Dashboard.css'
 import ClassCard from './ClassCard'
 import Header from "./Header";
 import SideBar from "./SideBar";
@@ -79,7 +79,7 @@ const TeacherDashboard = ({isTeacher}) => {
     <>
       <div className={`screen h-screen w-screen px-5 ${darkMode && "dark-mode"}`}>
 
-        <Header></Header>
+        <Header isTeacher = {isTeacher}></Header>
 
         <div className="content flex flex-row h-full">
 
