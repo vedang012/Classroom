@@ -95,7 +95,7 @@ const TeacherDashboard = ({isTeacher}) => {
                 {isTeacher ?  <p>Create a new Class...</p> : <p>Join a class and Get Started...</p>}
               </h1>
               <div className="join-input-grp flex flex-row space-x-3 mt-3">
-                <input type="text" onChange={(e) => handleNewClassOnChange(e)} className='join-input h-10 border p-3 rounded-md w-72' placeholder='Classroom name' />
+                <input type="text" onChange={(e) => handleNewClassOnChange(e)} className='join-input h-10 border p-3 rounded-md w-72' placeholder={isTeacher ? "Classroom Name" : "Classroom Id"} />
                 <input type="button" onClick={isTeacher ? createNewClassroom : joinClassroom} className='join-btn h-10 w-20 border rounded-md hover-bgcolor' value={isTeacher ? "Create" : "Join"} />
               </div>
             </div>

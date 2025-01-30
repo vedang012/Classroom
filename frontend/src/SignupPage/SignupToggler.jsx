@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './style/Signup.css'
-import SignupStudent from './SignupStudent.jsx'
-import SignupTeacher from './SignupTeacher.jsx'
+import SignupForm from './SignupForm.jsx'
 
 
 const SignupToggler = () => {
@@ -17,27 +16,30 @@ const SignupToggler = () => {
     }
 
 
-
-
     return (
-
 
         <>
             <div className='container w-2/3 h-10 bg-white flex flex-row justify-center align-middle items-center'>
                 <div className="student-btn w-1/2 text-center">
-                    <button className={`${SignupType === "student" && "enabled-btn"} Signup-type-btn`} onClick={setStudentSignupType}>Student Signup</button>
+                    <button
+                        className={`${SignupType === "student" && "enabled-btn"} Signup-type-btn`}
+                        onClick={setStudentSignupType}>
+                        Student Signup
+                    </button>
                 </div>
 
                 <div className="teacher-btn w-1/2 text-center">
-                    <button className={`${SignupType === "teacher" && "enabled-btn"} Signup-type-btn`} onClick={setTeacherSignupType}>Teacher Signup</button>
+                    <button 
+                        className={`${SignupType === "teacher" && "enabled-btn"} Signup-type-btn`} 
+                        onClick={setTeacherSignupType}>
+                        Teacher Signup
+                    </button>
                 </div>
 
             </div>
 
             <div className="Signup-card w-full flex justify-center">
-                {
-                    SignupType === "student" ? <SignupStudent /> : <SignupTeacher />
-                }
+                <SignupForm isTeacher={SignupType === "teacher"} />
             </div>
 
         </>
