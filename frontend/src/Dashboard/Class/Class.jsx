@@ -6,6 +6,7 @@ import Announcement from './Announcement'
 import Files from './Files'
 import { getClassroomName, getTeacherName } from '../../axios/requests'
 import { useLocation, useParams } from 'react-router-dom'
+import People from './People'
 
 
 const TeacherClass = () => {
@@ -90,8 +91,30 @@ const TeacherClass = () => {
                                 </div>
 
                                 <div className="card h-full">
-                                    {selectionIndex == 0 && <Announcement isTeacher = {isTeacher}/>}
-                                    {selectionIndex == 1 && <Files isTeacher = {isTeacher}/>}
+                                    {/* {selectionIndex == 0 && <Announcement isTeacher = {isTeacher}/>}
+                                    {selectionIndex == 1 && <Files isTeacher = {isTeacher}/>} */}
+
+                                    {
+(                                        () => {
+                                            switch (selectionIndex) {
+                                                case 0:
+                                                    return <Announcement isTeacher = {isTeacher}/>
+                                                    break
+                                            
+                                                case 1:
+                                                    return <Files isTeacher = {isTeacher}/>
+                                                
+                                                case 2:
+                                                    return <p>"This feature is coming soon 😅"</p>
+                                                
+                                                case 3:
+                                                    return <People />
+                                            }
+                                        })()
+                                    }
+                                    
+
+
 
                                 </div>
 
