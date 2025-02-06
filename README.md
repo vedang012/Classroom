@@ -129,12 +129,13 @@ Happy coding! 🚀
 * Teacher Dashboard ✅
 * Create / Join classroom using invite code ✅
 * Announcement section ✅
+* People section ✅
+
 
 ---
 
 # To-Do 
 * Files section ⏳
-* People section ⏳
 * Live chat ⏳
 * Additional options ⏳
 
